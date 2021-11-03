@@ -1,0 +1,248 @@
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  background: #d5e8eb;
+  color: #212121;
+  font-family: "Helvetica", sans-serif;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+
+.joinChatContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #e6fbff;
+  border-radius: 7%;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+}
+
+.joinChatContainer h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.joinChatContainer input {
+  width: 210px;
+  height: 40px;
+  margin: 7px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+input::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  background: #6a7dfe;
+  background: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+  background: -o-linear-gradient(left, #21d4fd, #b721ff);
+  background: -moz-linear-gradient(left, #21d4fd, #b721ff);
+  background: linear-gradient(left, #21d4fd, #b721ff);
+}
+
+
+.chat-window {
+  width: 600px;
+  height: 840px;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.chat-window p {
+  margin: 0;
+}
+
+.chat-window .chat-body {
+  height: calc(450px - (45px + 70px));
+  border-bottom: 2px solid black;
+  background: #fafafa;
+  position: relative;
+
+}
+.chat-window .chat-body .message-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.chat-window .chat-body .message-container::-webkit-scrollbar {
+  display: none;
+}
+.chat-window .chat-body .message {
+  height: auto;
+  padding: 10px;
+  display: flex;
+}
+
+.chat-window .chat-body .message .message-content {
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  max-width: 120px;
+  background-color: #6a7dfe;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#you {
+  justify-content: flex-start;
+}
+
+#you .message-content {
+  justify-content: flex-start;
+}
+
+#you .message-meta {
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+#other {
+  justify-content: flex-end;
+}
+
+#other .message-content {
+  justify-content: flex-end;
+  background-color: #21d4fd;
+}
+
+#other .message-meta {
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.message-meta #author {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.chat-window .chat-body .message .message-meta {
+  display: flex;
+  font-size: 12px;
+}
+
+.chat-window .chat-footer {
+  height: 40px;
+
+  display: flex;
+}
+
+.chat-window .chat-footer input {
+  height: 100%;
+  flex: 85%;
+  border: 0;
+  padding: 0 0.7em;
+  font-size: 1em;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.chat-window .chat-footer button {
+  border: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex: 15%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  font-size: 25px;
+  color: #6a7dfe;
+}
+
+.chat-window .chat-footer button:hover {
+  color: #21d4fd;
+}
+.hide {
+  opacity: 0 !important;
+}
+
+.btn-show-pass {
+  font-size: 15px;
+  color: #999999;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding-right: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  font-weight: 900;
+  width: 225px;
+  height: 50px;
+  margin: 7px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  background: -webkit-linear-gradient(to right, #21d4fd, #b721ff);
+  background: -o-linear-gradient(to right, #21d4fd, #b721ff);
+  background: -moz-linear-gradient(to right, #21d4fd, #b721ff);
+  background: linear-gradient(to right, #21d4fd, #b721ff);
+  color: #fff; 
+  cursor: pointer;
+  opacity: 1;
+}
+
+.btn-show-pass:hover {
+  opacity: 0.7;
+}
+
+.btn-show-pass.active {
+
+}
+
+.room-text {
+  font-size: 100px;
+  font-weight: 600;
+  color: black;
+  z-index: 1;
+  top: 0;
+  opacity: 0.1;
+
+}
+
+.room-text2{
+  font-size: 50px;
+  font-weight: 600;
+  color: black;
+  z-index: 1;
+  top: 0;
+  opacity: 0.1;
+
+}
